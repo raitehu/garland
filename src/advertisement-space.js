@@ -1,15 +1,16 @@
 import { Component } from "react";
 import { Advertisement } from "./advertisement";
+import "./Advertisement.css"
 
 export class AdvertisementSpace extends Component {
   getTimeStr(isoDateStr) {
     const date = new Date(isoDateStr);
     const year = date.getFullYear();
-    const month = date.getMonth();
-    const day = date.getDay();
+    const month = date.getMonth() + 1; // getMonth() start from 0
+    const day = date.getDate();
     const hour = date.getHours();
 
-    return `${year}/${month}/${day} ${hour}時頃まで`
+    return `${year}/${month}/${day} ${hour}`
   }
 
   getTweetId(tweetURL) {
@@ -21,10 +22,6 @@ export class AdvertisementSpace extends Component {
   renderAdvertisement(advertisement) {
     var expireDate = this.getTimeStr(advertisement.ExpireDate);
     var tweetId    = this.getTweetId(advertisement.TweetURL);
-
-    console.log(expireDate);
-    console.log(tweetId);
-
     return <Advertisement
               expireDate={expireDate}
               tweetId={tweetId}
@@ -33,7 +30,8 @@ export class AdvertisementSpace extends Component {
 
   render() {
     return (
-      <div>
+      <div className="advertisementArea">
+        <h2 className="outline">ネップリ一覧</h2>
         {
           this.props.advertisements.map((advertisement) => {
             return this.renderAdvertisement(advertisement)

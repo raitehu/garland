@@ -1,0 +1,32 @@
+.advertisementArea {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.advertisementArea h2 {
+  font-weight: bold;
+  color: black;
+}
+
+.advertisement {
+  max-width: 550px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.twitter-tweet.twitter-tweet-rendered {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.expireDate {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.expireDate span {
+  font-family: 'Old Standard TT';
+}
