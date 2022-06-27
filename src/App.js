@@ -1,3 +1,4 @@
+import { Link as Scroll } from "react-scroll";
 import CreateAdvertisement from './CreateAdvertisement';
 import FetchApi from './FetchApi';
 import './App.css';
@@ -47,6 +48,8 @@ function App() {
           内容に不適切な表現が含まれると運営が判断した場合や削除依頼があった場合は事前のご連絡無く削除を行うことがあります。
           <br />
           本サービスでは<a href="https://kamitsubaki.jp/guidelines/">KAMITSUBAKI STUDIO 二次創作ガイドライン</a>を不適切表現の基準といたします。
+          <br />
+          <Scroll to="advertisementFormArea" smooth={true} className="internalLink">ネップリ登録へ戻る</Scroll>
         </p>
 
         <h3>公式様</h3>

@@ -54,6 +54,13 @@ a:link, a:visited, a:hover, a:active, a:focus {
   margin: 0 2px 0;
 }
 
+a.internalLink {
+  color: black;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+}
+
 .outline {
   text-shadow:1px 1px 0 #F6F2CB, -1px -1px 0 #F6F2CB,
               -1px 1px 0 #F6F2CB, 1px -1px 0 #F6F2CB,
@@ -76,6 +83,7 @@ a:link, a:visited, a:hover, a:active, a:focus {
 }
 
 .footer {
+  margin-top: 50px;
   padding: 50px 0 50px;
   width: 100%;
   color: #F6F2CB;

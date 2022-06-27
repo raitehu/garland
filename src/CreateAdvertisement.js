@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 import { useForm } from "react-hook-form";
 import './Form.css';
 
@@ -18,8 +18,9 @@ export default function CreateAdvertisement() {
   console.log(watch("ExpireDate"));
 
   return (
-    <div className="advertisementFormArea">
+    <div className="advertisementFormArea" id="#advertisementFormArea">
       <h2 className="outline">ネップリ登録</h2>
+      <Scroll to="forIllustrators" smooth={true} className="internalLink">登録前にご一読ください</Scroll>
       <form onSubmit={handleSubmit(onSubmit)} className="advertisementForm">
         <label className="outline">告知ツイートのURL</label>
         <input
