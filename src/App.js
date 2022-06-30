@@ -1,5 +1,5 @@
 import { Link as Scroll } from "react-scroll";
-import CreateAdvertisement from './CreateAdvertisement';
+import Form from './Form';
 import FetchApi from './FetchApi';
 import './App.css';
 
@@ -13,7 +13,7 @@ function App() {
         <p className='h1sub outline'>#VALIS_ART ネップリ一覧化サービス</p>
       </div>
 
-      <CreateAdvertisement />
+      <Form />
       <FetchApi />
 
       <div className='footer'>
