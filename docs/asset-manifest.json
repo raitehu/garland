@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/network-print-notifier-front/static/css/main.52dfad74.css",
-    "main.js": "/network-print-notifier-front/static/js/main.8cca9d2b.js",
+    "main.css": "/network-print-notifier-front/static/css/main.3953e7a5.css",
+    "main.js": "/network-print-notifier-front/static/js/main.577b7691.js",
     "static/js/787.9f62ae33.chunk.js": "/network-print-notifier-front/static/js/787.9f62ae33.chunk.js",
     "static/media/circus.png": "/network-print-notifier-front/static/media/circus.ca241d6373b56cb69d3e.png",
     "index.html": "/network-print-notifier-front/index.html",
-    "main.52dfad74.css.map": "/network-print-notifier-front/static/css/main.52dfad74.css.map",
-    "main.8cca9d2b.js.map": "/network-print-notifier-front/static/js/main.8cca9d2b.js.map",
+    "main.3953e7a5.css.map": "/network-print-notifier-front/static/css/main.3953e7a5.css.map",
+    "main.577b7691.js.map": "/network-print-notifier-front/static/js/main.577b7691.js.map",
     "787.9f62ae33.chunk.js.map": "/network-print-notifier-front/static/js/787.9f62ae33.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52dfad74.css",
-    "static/js/main.8cca9d2b.js"
+    "static/css/main.3953e7a5.css",
+    "static/js/main.577b7691.js"
   ]
 }
