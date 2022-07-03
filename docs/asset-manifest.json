@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/network-print-notifier-front/static/css/main.3953e7a5.css",
-    "main.js": "/network-print-notifier-front/static/js/main.577b7691.js",
-    "static/js/787.9f62ae33.chunk.js": "/network-print-notifier-front/static/js/787.9f62ae33.chunk.js",
-    "static/media/circus.png": "/network-print-notifier-front/static/media/circus.ca241d6373b56cb69d3e.png",
-    "index.html": "/network-print-notifier-front/index.html",
-    "main.3953e7a5.css.map": "/network-print-notifier-front/static/css/main.3953e7a5.css.map",
-    "main.577b7691.js.map": "/network-print-notifier-front/static/js/main.577b7691.js.map",
-    "787.9f62ae33.chunk.js.map": "/network-print-notifier-front/static/js/787.9f62ae33.chunk.js.map"
+    "main.css": "/garland/static/css/main.e3daf6aa.css",
+    "main.js": "/garland/static/js/main.99971004.js",
+    "static/js/787.307939fc.chunk.js": "/garland/static/js/787.307939fc.chunk.js",
+    "static/media/circus.png": "/garland/static/media/circus.ca241d6373b56cb69d3e.png",
+    "index.html": "/garland/index.html",
+    "main.e3daf6aa.css.map": "/garland/static/css/main.e3daf6aa.css.map",
+    "main.99971004.js.map": "/garland/static/js/main.99971004.js.map",
+    "787.307939fc.chunk.js.map": "/garland/static/js/787.307939fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3953e7a5.css",
-    "static/js/main.577b7691.js"
+    "static/css/main.e3daf6aa.css",
+    "static/js/main.99971004.js"
   ]
 }

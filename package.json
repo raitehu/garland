@@ -1,5 +1,5 @@
 {
-  "name": "network-print-notifier-front",
+  "name": "garland",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "react-twitter-embed": "^4.0.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://raitehu.github.io/network-print-notifier-front",
+  "homepage": "https://raitehu.github.io/garland",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
