@@ -19,12 +19,13 @@ export class AdvertisementSpace extends Component {
                    .slice(-1)[0];      // return last item(= tweetID)
   }
 
-  renderAdvertisement(advertisement) {
+  renderAdvertisement(advertisement, index) {
     var expireDate = this.getTimeStr(advertisement.ExpireDate);
     var tweetId    = this.getTweetId(advertisement.TweetURL);
     return <Advertisement
               expireDate={expireDate}
               tweetId={tweetId}
+              key={index}
            />;
   }
 
@@ -33,8 +34,8 @@ export class AdvertisementSpace extends Component {
       <div className="advertisementArea">
         <h2 className="outline">ネップリ一覧</h2>
         {
-          this.props.advertisements.map((advertisement) => {
-            return this.renderAdvertisement(advertisement)
+          this.props.advertisements.map((advertisement, index) => {
+            return this.renderAdvertisement(advertisement, index)
           })
         }
       </div>

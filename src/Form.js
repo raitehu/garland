@@ -9,13 +9,25 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Form() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = (data) => {
+    const TweetURL = data.TweetURL.split('?')[0];
+    const ExpireDate = `${data.ExpireDate.split(':')[0]}:00:00+09:00`;
     axios.post(process.env.REACT_APP_API_URL, JSON.stringify({
       "function": "create",
       "data": {
-        "TweetURL": data.TweetURL.split('?')[0],
-        "ExpireDate": `${data.ExpireDate.split(':')[0]}:00:00+09:00`
+        "TweetURL": TweetURL,
+        "ExpireDate": ExpireDate
       }
     }));
+    axios.post(process.env.REACT_APP_BACKEND_URL, JSON.stringify({
+      "TweetURL": TweetURL,
+      "ExpireDate": ExpireDate
+    }), {
+      headers: {
+        "Authorization": process.env.REACT_APP_API_TOKEN,
+        "Accept": "*/*",
+        "Content-Type": "application/json",
+      }
+    });
     reset();
     flashMessage()
   }
