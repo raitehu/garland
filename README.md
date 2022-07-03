@@ -1,71 +1,42 @@
-![](cover_image.png)
-# Network Print Notifier Front
+# ![GARLAND](cover-garland.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## GARLANDについて
 
-## Available Scripts
+ネップリ一覧化サービス GARLAND はその語源の花環のように、すばらしいファンアートでグループとコミュニティを彩りたいという願いから生まれたサービスです。
 
-In the project directory, you can run:
+GARLANDはバーチャルサーカス団VALIS様のファンアートのネップリを広報することを目的としています。
 
-### `npm start`
+本サービスの開発・運営はVALIS公式様とは無関係の、有志のファンによって行っていますので、本サービスへの質問やお問合せはVALIS公式様ではなく[WANDERER'S INFO運営](https://twitter.com/WANDERERSINFO)のDMまでお願いいたします。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 仕様
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+本リポジトリはフロントのみの構成になっており、システムとして動作するためには別途データ保存用のバックエンドとツイート用のAPIが必要です。
 
-### `npm test`
+### ツイートタイミング
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+本リポジトリに含まれるソースコードの範囲外ですが現在の設定としては
 
-### `npm run build`
+1. 登録時
+2. 月曜・金曜の朝07:30(JST)に登録件数の広報
+3. プリント期限12時間前
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+の3つのタイミングで広報が実施されます。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 開発にあたって
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 開発モードでの起動 - `npm start`
 
-### `npm run eject`
+[http://localhost:3000](http://localhost:3000)で開発中画面の確認ができます。
+watchモードになるのでファイル保存時で自動リロードが走ります。
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 実行環境へのデプロイ- `npm run deploy`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+自動でビルドとcommit/pushが走ります。
+GitHub Actionsによるデプロイが完了すると[https://raitehu.github.io/garland/](https://raitehu.github.io/garland/)で画面確認ができます。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 環境変数
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| key | type | description |
+| ---- | ---- | ---- |
+| REACT_APP_API_URL | string | データ保存用のバックエンドのURL<br>ex) https://XXXXXX/YYY/ |
