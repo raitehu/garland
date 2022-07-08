@@ -59,3 +59,8 @@
 .expireDate span {
   font-family: 'Old Standard TT';
 }
+
+.noIllustsMessage {
+  padding-top: 140px;
+  height: 300px;
+}

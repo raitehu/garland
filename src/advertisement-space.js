@@ -29,16 +29,28 @@ export class AdvertisementSpace extends Component {
            />;
   }
 
+  isAdvertisementExist(advertisements) {
+    return advertisements.length > 1 || !advertisements[0].TweetURL === '';
+  }
+
   render() {
-    return (
-      <div className="advertisementArea">
-        <h2 className="outline">ネップリ一覧</h2>
-        {
-          this.props.advertisements.map((advertisement, index) => {
-            return this.renderAdvertisement(advertisement, index)
-          })
-        }
-      </div>
-    )
+    if (this.isAdvertisementExist(this.props.advertisements)) {
+      return (
+        <div className="advertisementArea">
+          <h2 className="outline">ネップリ一覧</h2>
+          {
+            this.props.advertisements.map((advertisement, index) => {
+              return this.renderAdvertisement(advertisement, index)
+            })
+          }
+        </div>
+      )
+    } else {
+      return (
+        <div className="advertisementArea">
+          <p className="noIllustsMessage outline">現在登録されているネップリはありません</p>
+        </div>
+      )
+    }
   }
 }
