@@ -39,4 +39,4 @@ GitHub Actionsによるデプロイが完了すると[https://raitehu.github.io/
 
 | key | type | description |
 | ---- | ---- | ---- |
-| REACT_APP_API_URL | string | データ保存用のバックエンドのURL<br>ex) https://XXXXXX/YYY/ |
+| REACT_APP_GARLAND_BACKEND_URL | string | データ保存用のバックエンドのURL<br>ex) https://XXXXXX/YYY/ |

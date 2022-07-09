@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/garland/static/css/main.04cc6bdd.css",
-    "main.js": "/garland/static/js/main.e7234472.js",
+    "main.js": "/garland/static/js/main.2b2ed8b6.js",
     "static/js/787.307939fc.chunk.js": "/garland/static/js/787.307939fc.chunk.js",
     "static/media/circus.png": "/garland/static/media/circus.ca241d6373b56cb69d3e.png",
     "index.html": "/garland/index.html",
     "main.04cc6bdd.css.map": "/garland/static/css/main.04cc6bdd.css.map",
-    "main.e7234472.js.map": "/garland/static/js/main.e7234472.js.map",
+    "main.2b2ed8b6.js.map": "/garland/static/js/main.2b2ed8b6.js.map",
     "787.307939fc.chunk.js.map": "/garland/static/js/787.307939fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04cc6bdd.css",
-    "static/js/main.e7234472.js"
+    "static/js/main.2b2ed8b6.js"
   ]
 }

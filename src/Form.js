@@ -11,14 +11,16 @@ export default function Form() {
   const onSubmit = (data) => {
     const TweetURL = data.TweetURL.split('?')[0];
     const ExpireDate = `${data.ExpireDate.split(':')[0]}:00:00+09:00`;
-    axios.post(process.env.REACT_APP_API_URL, JSON.stringify({
+    // 登録
+    axios.post(process.env.REACT_APP_GARLAND_BACKEND_URL, JSON.stringify({
       "function": "create",
       "data": {
         "TweetURL": TweetURL,
         "ExpireDate": ExpireDate
       }
     }));
-    axios.post(process.env.REACT_APP_BACKEND_URL, JSON.stringify({
+    // 登録内容のツイート
+    axios.post(process.env.REACT_APP_WANDERERS_INFO_BACKEND_URL, JSON.stringify({
       "TweetURL": TweetURL,
       "ExpireDate": ExpireDate
     }), {
