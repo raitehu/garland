@@ -30,7 +30,13 @@ export class AdvertisementSpace extends Component {
   }
 
   isAdvertisementExist(advertisements) {
-    return advertisements.length > 1 || !advertisements[0].TweetURL === '';
+    if (advertisements.length === 0) {
+      return false;
+    } else if (advertisements.length === 1 && advertisements[0].TweetURL === '') {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   render() {
