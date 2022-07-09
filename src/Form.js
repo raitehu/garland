@@ -8,9 +8,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Form() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const TweetURL = data.TweetURL.split('?')[0];
     const ExpireDate = `${data.ExpireDate.split(':')[0]}:00:00+09:00`;
+    const Timestamp = (new Date()).getTime();
+    const TokenPlaintext = JSON.stringify({
+      "Timestamp": Timestamp,
+      "Token": process.env.REACT_APP_API_TOKEN
+    }).replace(/\s+/g, '');
+    const uint8 = new TextEncoder().encode(TokenPlaintext);
+    const digest = await crypto.subtle.digest('SHA-256', uint8);
+    const AuthorizationToken = Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2, '0')).join('');
+
     // 登録
     axios.post(process.env.REACT_APP_GARLAND_BACKEND_URL, JSON.stringify({
       "function": "create",
@@ -21,11 +30,12 @@ export default function Form() {
     }));
     // 登録内容のツイート
     axios.post(process.env.REACT_APP_WANDERERS_INFO_BACKEND_URL, JSON.stringify({
+      "Timestamp": Timestamp,
       "TweetURL": TweetURL,
       "ExpireDate": ExpireDate
     }), {
       headers: {
-        "Authorization": process.env.REACT_APP_API_TOKEN,
+        "Authorization": AuthorizationToken,
         "Accept": "*/*",
         "Content-Type": "application/json",
       }
@@ -33,7 +43,7 @@ export default function Form() {
     reset();
     flashMessage()
   }
-  const flashMessage = () => toast.success("登録成功", {
+  const flashMessage = () => toast.success("一覧への反映には少し時間がかかります", {
     position: "top-center"
   })
 
