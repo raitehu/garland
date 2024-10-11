@@ -1,6 +1,6 @@
 ---
 layout: redirected
 sitemap: false
-permalink: /garland/
+permalink: /
 redirect_to: https://garland.raitehu.com/
 ---
